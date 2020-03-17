@@ -1,0 +1,32 @@
+docker network ls
+docker network inspect bridge
+
+apk update
+apk add bridge
+brctl show
+ip a
+
+docker run -dt ubuntu sleep infinity
+docker ps
+brctl show
+ip a
+
+docker network inspect bridge
+
+docker ps
+  # => コンテナIDを控える
+docker stop <yourcontainerid>
+
+docker run --name web1 -d -p 8080:80 nginx
+curl localhost:8080
+
+
+【便利なコマンド】
+・traceroute
+apt update
+apt install -y traceroute
+traceroute --tcp www.github.com
+
+・dig
+apt install dnsutils
+dig www.github.com
